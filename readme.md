@@ -1,9 +1,11 @@
 ## WebGL for busy people
 There are lots of good tutorials out there. But we're all busy people so WFBP
-demonstrates a minimal implementation of a WebGL application which gets
+demonstrates a minimal implementation of a WebGL application to quickly get
 something on the screen without wading through lots of documentation.
 
-The important array of vertices is declared at the beginning of the script.
+![](grid.png)
+
+The important array of vertices is declared near the top of the file.
 ```js
 		// THE BIT YOU'RE PROBABLY INTERESTED IN
 
@@ -22,8 +24,6 @@ The important array of vertices is declared at the beginning of the script.
 
 See it running via
 [rawgit](https://rawgit.com/deanturpin/WebGL/master/index.html).
-
-![](grid.png)
 
 ### See also
 - http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html
@@ -55,7 +55,7 @@ code.
 
 ```
 
-WFBP captures the GLSL code inline using backticked JavaScript constants. The
+WFBP captures the GLSL code *inline* using backticked JavaScript constants. The
 point size is defined here.
 ```js
 		// Create vertex shader
