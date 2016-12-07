@@ -23,6 +23,8 @@ The important array of vertices is declared at the beginning of the script.
 See it running via
 [rawgit](https://rawgit.com/deanturpin/WebGL/master/index.html).
 
+![](grid.png)
+
 ### See also
 - http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html
 - https://en.wikipedia.org/wiki/WebGL
