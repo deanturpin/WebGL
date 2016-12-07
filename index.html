@@ -20,11 +20,11 @@
 
 		// THE WEBGL
 
-		// Create canvas
+		// Create canvas element
 		const canvas = document.createElement("canvas")
 		const body = document.getElementsByTagName("body")[0]
 
-		// Add it to the DOM
+		// Add element to the DOM
 		body.appendChild(canvas)
 
 		// Set canvas size
@@ -76,7 +76,6 @@
 		gl.useProgram(program)
 		gl.enableVertexAttribArray(positionAttributeLocation);
 
-		// Bind the position buffer.
 		gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
 		 
 		gl.vertexAttribPointer(
