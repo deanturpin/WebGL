@@ -40,10 +40,10 @@ code.
 
 ```
 
-WFBP captures the GLSL code inline using backticked JavaScript variables.
+WFBP captures the GLSL code inline using backticked JavaScript constants.
 ```js
 // Create vertex shader
-var vertexShaderSource = `
+const vertexShaderSource = `
 
 	attribute vec4 a_position;
 	void main() {
@@ -57,3 +57,12 @@ To avoid any dependency with the tags defined in the HTML&mdash;specifically the
 canvas tag&mdash;the canvas is create dynamically by the JavaScript. This means
 everything within the script tag can be included as an external script without
 concerning yourself with HTML to support it.
+
+```js
+// Create canvas
+const canvas = document.createElement("canvas")
+const body = document.getElementsByTagName("body")[0]
+
+// Add it to the DOM
+body.appendChild(canvas)
+```
