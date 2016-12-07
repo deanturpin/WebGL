@@ -4,8 +4,6 @@
 <input type="checkbox" id="reload" checked>reload<br>
 </form>
 
-<canvas id="canvas" style="border: none;" width="500" height="500"></canvas>
-
 <script>
 	"use strict"
 
@@ -17,12 +15,19 @@
 	}, 2000)
 </script>
 
+<canvas id="canvas"></canvas>
+
 <script type="text/javascript">
 	"use strict"
 
 	onload = function() {
 
+		// Create canvas
 		var canvas = document.getElementById("canvas")
+
+		// Set canvas size
+		canvas.width = window.innerWidth
+		canvas.height = window.innerHeight
 
 		// Create WebGL rendering context
 		var gl = canvas.getContext("webgl")
@@ -67,10 +72,10 @@
 
 		// Array of points
 		var positions = []
-		for (var i = 0; i < 1; i += .1) {
+		for (var i = 0; i < 2; i += .01) {
 
 			positions[positions.length] = i
-			positions[positions.length] = i/2
+			positions[positions.length] = Math.cos(Math.PI * 2 * i)
 		}
 
 		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW)
