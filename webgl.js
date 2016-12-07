@@ -1,20 +1,5 @@
 "use strict"
 
-function createShader(gl, type, source) {
-
-	var shader = gl.createShader(type)
-	gl.shaderSource(shader, source)
-	gl.compileShader(shader)
-
-	var success = gl.getShaderParameter(shader, gl.COMPILE_STATUS)
-
-	if (success)
-		return shader
-
-	console.log(gl.getShaderInfoLog(shader))
-	gl.deleteShader(shader)
-}
-
 onload = function() {
 
 	var canvas = document.getElementById("canvas")
@@ -37,7 +22,10 @@ onload = function() {
 			gl_PointSize = 10.0;
 		}`
 
-	var vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource)
+	var vertexShader = gl.createShader(gl.VERTEX_SHADER)
+	gl.shaderSource(vertexShader, vertexShaderSource)
+	gl.compileShader(vertexShader)
+	gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)
 
 	// Fragment shader
 	var fragmentShaderSource = `
@@ -47,7 +35,10 @@ onload = function() {
 			gl_FragColor = vec4(1, 0.5, 0.2, 1);
 		}`
 
-	var fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource)
+	var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
+	gl.shaderSource(fragmentShader, fragmentShaderSource)
+	gl.compileShader(fragmentShader)
+	gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)
 
 	// Create program
 	var program = gl.createProgram()
