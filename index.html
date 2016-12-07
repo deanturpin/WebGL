@@ -24,12 +24,12 @@
 		// THE BIT YOU'RE PROBABLY INTERESTED IN
 
 		// Create array of points
-		var positions = []
+		var vertices = []
 		for (var i = -1; i < 1; i += .05)
 			for (var j = -1; j < 1; j += .05) {
 
-				positions[positions.length] = i
-				positions[positions.length] = j
+				vertices[vertices.length] = i
+				vertices[vertices.length] = j
 			}
 
 		// THE WEBGL
@@ -86,7 +86,7 @@
 		const positionBuffer = gl.createBuffer()
 		gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer)
 
-		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW)
+		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW)
 		gl.useProgram(program)
 		gl.enableVertexAttribArray(positionAttributeLocation);
 
@@ -103,6 +103,6 @@
 		)
 
 		// Render
-		gl.drawArrays(gl.POINTS, 0, positions.length/2);
+		gl.drawArrays(gl.POINTS, 0, vertices.length/2);
 	}
 </script>

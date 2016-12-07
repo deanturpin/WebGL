@@ -10,16 +10,16 @@ The important array of vertices is declared near the top of the file.
 		// THE BIT YOU'RE PROBABLY INTERESTED IN
 
 		// Create array of points
-		var positions = []
+		var vertices = []
 		for (var i = -1; i < 1; i += .05)
 			for (var j = -1; j < 1; j += .05) {
 
-				positions[positions.length] = i
-				positions[positions.length] = j
+				vertices[vertices.length] = i
+				vertices[vertices.length] = j
 			}
 
 		// THE WEBGL
-// ...
+		// ...
 ```
 
 See it running via
