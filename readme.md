@@ -1,12 +1,7 @@
 ## WebGL for busy people
-There are lots of good WebGL tutorials out there but this is a minimal
-implementation to get something on the screen without wading through lots of
-documentation.
-
-We're all busy people.
-
-See it running on
-[rawgit](https://rawgit.com/deanturpin/WebGL/master/index.html).
+There are lots of good WebGL tutorials out there. But we're all busy people so
+WFBP demonstrates a minimal implementation of a WebGL application a to get
+something on the screen without wading through lots of documentation.
 
 The important array of vertices is declared at the top
 ```js
@@ -24,6 +19,9 @@ for (var i = 0; i < 2; i += .01) {
 // THE DETAILS
 // ...
 ```
+
+See it running via
+[rawgit](https://rawgit.com/deanturpin/WebGL/master/index.html).
 
 ### See also
 - http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html
