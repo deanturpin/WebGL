@@ -93,3 +93,7 @@ const body = document.getElementsByTagName("body")[0]
 // Add it to the DOM
 body.appendChild(canvas)
 ```
+
+### External libraries
+Much of the details could of course be hidden by using a 3D library but I didn't
+want to introduce any external dependencies.
