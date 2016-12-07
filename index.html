@@ -1,21 +1,7 @@
 <!DOCTYPE HTML>
 
-<form style="float: right">
-<input type="checkbox" id="reload" checked>reload<br>
-</form>
-
+<!-- WebGL for busy people -->
 <script>
-	"use strict"
-
-	// Periodically check reload checkbox state
-	setInterval(function () {
-
-		if (document.getElementById("reload").checked === true)
-			window.location.reload()
-	}, 2000)
-</script>
-
-<script type="text/javascript">
 
 	"use strict"
 
@@ -106,3 +92,25 @@
 		gl.drawArrays(gl.POINTS, 0, vertices.length/2);
 	}
 </script>
+
+<!-- This is nothing to do with the WebGL. It's simply a dev tool to refresh the
+page so you can immediately see what effect your changes are having. -->
+
+<!-- Create a checkbox to control refreshing -->
+<form style="float: right">
+<input type="checkbox" id="reload" checked>reload<br>
+</form>
+
+<!-- Periodically check the status of the checkbox to decide if the page needs
+refreshing -->
+<script>
+	"use strict"
+
+	// Periodically check reload checkbox state
+	setInterval(function () {
+
+		if (document.getElementById("reload").checked === true)
+			window.location.reload()
+	}, 2000)
+</script>
+
