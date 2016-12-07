@@ -21,6 +21,18 @@
 
 	onload = function() {
 
+		// THE BIT YOU'RE PROBABLY INTERESTED IN
+
+		// Create array of points
+		var positions = []
+		for (var i = 0; i < 2; i += .01) {
+
+			positions[positions.length] = i
+			positions[positions.length] = Math.cos(Math.PI * 2 * i)
+		}
+
+		// THE DETAILS
+
 		// Create canvas
 		const canvas = document.createElement("canvas")
 		const body = document.getElementsByTagName("body")[0]
@@ -72,14 +84,6 @@
 		const positionAttributeLocation = gl.getAttribLocation(program, "a_position")
 		const positionBuffer = gl.createBuffer()
 		gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer)
-
-		// Create array of points
-		var positions = []
-		for (var i = 0; i < 2; i += .01) {
-
-			positions[positions.length] = i
-			positions[positions.length] = Math.cos(Math.PI * 2 * i)
-		}
 
 		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW)
 		gl.useProgram(program)

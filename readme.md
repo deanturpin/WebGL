@@ -1,14 +1,31 @@
 ## WebGL for busy people
 There are lots of good WebGL tutorials out there but this is a minimal
-implementation to get something on the screen&mdash;in one file&mdash;without
-wading through lots of documentation
+implementation to get something on the screen without wading through lots of
+documentation.
 
 We're all busy people.
 
 See it running on
 [rawgit](https://rawgit.com/deanturpin/WebGL/master/index.html).
 
-### Heavily influenced by
+The important array of vertices is declared at the top
+```js
+// THE BIT YOU'RE PROBABLY INTERESTED IN
+
+// Create array of points
+var positions = []
+
+for (var i = 0; i < 2; i += .01) {
+
+	positions[positions.length] = i
+	positions[positions.length] = Math.cos(Math.PI * 2 * i)
+}
+
+// THE DETAILS
+// ...
+```
+
+### See also
 - http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html
 - https://en.wikipedia.org/wiki/WebGL
 
