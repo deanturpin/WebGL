@@ -27,7 +27,7 @@ See it running via
 - http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html
 - https://en.wikipedia.org/wiki/WebGL
 
-## tl;dr - many tutorials go into a lot of detail but this puts it all in one file.
+## TL;DR many tutorials detail each step but WFBP condenses it into one file
 
 ### GLSL
 [WebGL
