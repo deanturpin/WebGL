@@ -9,7 +9,7 @@ The important array of vertices is declared near the top of the file.
 ```js
 		// THE BIT YOU'RE PROBABLY INTERESTED IN
 
-		// Create array of points
+		// Create array of vertices
 		var vertices = []
 		for (var i = -1; i < 1; i += .05)
 			for (var j = -1; j < 1; j += .05) {
