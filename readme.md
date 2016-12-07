@@ -1,7 +1,7 @@
 ## WebGL for busy people
-There are lots of good good WebGL tutorials but this is the smallest amount of
-code to get something on the screen&mdash;in one file&mdash;without wading
-through lots of documentation
+There are lots of good WebGL tutorials out there but this is a minimal
+implementation to get something on the screen&mdash;in one file&mdash;without
+wading through lots of documentation
 
 We're all busy people.
 
