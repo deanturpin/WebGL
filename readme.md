@@ -1,22 +1,22 @@
 ## WebGL for busy people
-There are lots of good WebGL tutorials out there. But we're all busy people so
-WFBP demonstrates a minimal implementation of a WebGL application a to get
+There are lots of good tutorials out there. But we're all busy people so WFBP
+demonstrates a minimal implementation of a WebGL application which gets
 something on the screen without wading through lots of documentation.
 
 The important array of vertices is declared at the beginning of the script.
 ```js
-// THE BIT YOU'RE PROBABLY INTERESTED IN
+		// THE BIT YOU'RE PROBABLY INTERESTED IN
 
-// Create array of points
-var positions = []
+		// Create array of points
+		var positions = []
+		for (var i = -.5; i < .5; i += .05)
+			for (var j = -.5; j < .5; j += .05) {
 
-for (var i = 0; i < 2; i += .01) {
+				positions[positions.length] = i
+				positions[positions.length] = j
+			}
 
-	positions[positions.length] = i
-	positions[positions.length] = Math.cos(Math.PI * 2 * i)
-}
-
-// THE DETAILS
+		// THE WEBGL
 // ...
 ```
 
@@ -53,16 +53,28 @@ code.
 
 ```
 
-WFBP captures the GLSL code inline using backticked JavaScript constants.
+WFBP captures the GLSL code inline using backticked JavaScript constants. The
+point size is defined here.
 ```js
-// Create vertex shader
-const vertexShaderSource = `
+		// Create vertex shader
+		const vertexShaderSource = `
 
-	attribute vec4 a_position;
-	void main() {
-		gl_Position = a_position;
-		gl_PointSize = 10.0;
-	}`
+			attribute vec4 a_position;
+			void main() {
+				gl_Position = a_position;
+				gl_PointSize = 5.0;
+			}`
+```
+
+The colour is defined in the fragment shader.
+```js
+		// Create fragment shader
+		const fragmentShaderSource = `
+
+			precision mediump float;
+			void main() {
+				gl_FragColor = vec4(0, 0, 0, 1);
+			}`
 ```
 
 ### The canvas object

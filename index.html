@@ -25,13 +25,14 @@
 
 		// Create array of points
 		var positions = []
-		for (var i = 0; i < 2; i += .01) {
+		for (var i = -.5; i < .5; i += .05)
+			for (var j = -.5; j < .5; j += .05) {
 
-			positions[positions.length] = i
-			positions[positions.length] = Math.cos(Math.PI * 2 * i)
-		}
+				positions[positions.length] = i
+				positions[positions.length] = j
+			}
 
-		// THE DETAILS
+		// THE WEBGL
 
 		// Create canvas
 		const canvas = document.createElement("canvas")
@@ -53,7 +54,7 @@
 			attribute vec4 a_position;
 			void main() {
 				gl_Position = a_position;
-				gl_PointSize = 10.0;
+				gl_PointSize = 5.0;
 			}`
 
 		const vertexShader = gl.createShader(gl.VERTEX_SHADER)
@@ -66,7 +67,7 @@
 
 			precision mediump float;
 			void main() {
-				gl_FragColor = vec4(1, 0.5, 0.2, 1);
+				gl_FragColor = vec4(0, 0, 0, 1);
 			}`
 
 		const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
