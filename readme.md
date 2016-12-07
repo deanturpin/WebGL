@@ -27,9 +27,7 @@ See it running via
 - http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html
 - https://en.wikipedia.org/wiki/WebGL
 
-## Refactor and simplify
-
-tl;dr - many tutorials go into a lot of detail but this puts it all in one file.
+## tl;dr - many tutorials go into a lot of detail but this puts it all in one file.
 
 ### GLSL
 [WebGL
@@ -68,10 +66,10 @@ const vertexShaderSource = `
 ```
 
 ### The canvas object
-To avoid any dependency with the tags defined in the HTML&mdash;specifically the
-canvas tag&mdash;the canvas is create dynamically by the JavaScript. This means
-everything within the script tag can be included as an external script without
-concerning yourself with HTML to support it.
+To avoid any dependency with the tags defined in the HTML the canvas is created
+dynamically by the JavaScript. This means everything within the script tag can
+be included as an external script without concerning yourself with HTML to
+support it.
 
 ```js
 // Create canvas
