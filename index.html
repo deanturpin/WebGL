@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+
+<form style="float: right">
+<input type="checkbox" id="reload" checked>reload<br>
+</form>
+
+<script type="text/javascript" src="webgl.js"></script>
+
+<canvas id="canvas" style="border: none;" width="500" height="500"></canvas>
+
+<script>
+	"use strict"
+
+	// Periodically check reload checkbox state
+	setInterval(function () {
+
+		if (document.getElementById("reload").checked === true)
+			window.location.reload()
+	}, 2000)
+</script>
