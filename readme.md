@@ -3,7 +3,7 @@ There are lots of good WebGL tutorials out there. But we're all busy people so
 WFBP demonstrates a minimal implementation of a WebGL application a to get
 something on the screen without wading through lots of documentation.
 
-The important array of vertices is declared at the top
+The important array of vertices is declared at the beginning of the script.
 ```js
 // THE BIT YOU'RE PROBABLY INTERESTED IN
 
@@ -32,9 +32,9 @@ See it running via
 tl;dr - many tutorials go into a lot of detail but this puts it all in one file.
 
 ### GLSL
-(WebGL
-Fundamentals)[http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html]
-uses slightly esoteric HTML ```script``` blocks to capture the non-JavaScript
+[WebGL
+Fundamentals](http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html)
+uses esoteric HTML ```script``` blocks to capture the non-JavaScript
 code.
 
 ```html
