@@ -7,13 +7,7 @@ onload = function() {
 	// Create WebGL rendering context
 	var gl = canvas.getContext("webgl")
 
-	/*
-	This is the GPU code. You'll notice it isn't quite JavaScript. Most
-	tutorials tend to put it between HTML script tags but then it's not
-	immediately obvious how it relates to the rest of the code.
-
-	Note: you can't drop the terminating semi-colon.
-	*/
+	// Create vertex shader
 	var vertexShaderSource = `
 
 		attribute vec4 a_position;
@@ -27,7 +21,7 @@ onload = function() {
 	gl.compileShader(vertexShader)
 	gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)
 
-	// Fragment shader
+	// Create fragment shader
 	var fragmentShaderSource = `
 
 		precision mediump float;
@@ -60,9 +54,7 @@ onload = function() {
 	}
 
 	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW)
-
 	gl.useProgram(program)
-
 	gl.enableVertexAttribArray(positionAttributeLocation);
 
 	// Bind the position buffer.
