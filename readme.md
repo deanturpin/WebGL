@@ -1,7 +1,7 @@
 ## WebGL for busy people
-There are lots of good tutorials out there. But we're all busy people so WFBP
-demonstrates a minimal implementation of a WebGL application to quickly get
-something on the screen without wading through lots of documentation.
+There are lots of good tutorials out there. But we're all busy people so WFBP is
+a minimal implementation of a WebGL application to quickly get something on the
+screen without wading through lots of documentation.
 
 ![](grid.png)
 
